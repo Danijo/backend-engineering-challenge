@@ -1,0 +1,24 @@
+Challenge Resolution:
+
+a) 
+
+In order to resolve this problem, first we need to get the data into memory in python. After getting the data, we study the problem and understood we only needed the 'time' and 'duration' variables.
+We choose a better structure to place it on (more familiar to us) ,dataframe , and ordered to get the first and last minute. (The 'time' variables is more suited to be a datetime type, that worked in our behalf because it is pretty easy to calculate the minute. 
+The next step was to get the window parameter. Now, we study again the problem. So for all minutes, in a window time span, we need to get the corresponded duration. We could use a new column in the dataframe in order to calculate and save each window or create a linkedlist to add and remove the dates/duration.
+But for the next step, we concluded that in order to save memory and calculus time, we just need two variables that saves the limits of the window and a addition on that knows were in the dataframe we look for the date last.
+We only save the value of this variables and get the result in 2 * n time (one for the minutes and one for the dates length).
+
+
+b) 
+
+This resolve the problem in question but not all the problem. 
+
+1) For other cases that presents different hour, we need to take in consider the hour variable. For that, we needed to compare hours, and if the hour was n latter, we multiply the minutes by 60 * hour. ( And in the printing stage, we divided by 60 * hour * minutes.
+Ex: 18:12:22 and 19:01:10  = minute.b + (hour.b - hour.a)*60   - minute.a and we get the diference between each dates.
+
+2) For diferente dates (day , month and year) we need to convert into a integer (just like the excel does) but taking in consideration of the number of days in each month) and add again into the minute + hour variable the date.
+
+
+The b) was not implemented because of lack of time.
+
+
